@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@500&family=Rubik&display=swap');
+*{
+    font-family: 'Nunito';
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background-font: rgb(33, 92, 255);
+}
+
+body{
+    text-align: center;
+    background-color: rgb(224, 237, 253);
+}
+
+.titulo{
+    font-size: 3rem;
+    /* font-weight: 1000; */
+    color: var(--background-font);
+    margin-top: 20%;
+}
+
+.nombre{
+    font-size: 1.3rem;
+}
