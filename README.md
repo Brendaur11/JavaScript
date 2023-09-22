@@ -1,3 +1,2 @@
 # JavaScript
-Coderhouse
-Hola! Este es mi primera pre-entrega del Curso JavaScript.
+Hola! Este es mi primera pre-entrega del Curso JavaScript en Coderhouse-.
