@@ -1,28 +1,45 @@
-// SOLICITAR QUE EL USUARIO ELIJA UN DESTINO PARA COMPRAR UN PASAJE DE AVION
+// SOLICITAR QUE EL USUARIO INGRESE SU NOMBRE
+let nombreUsuario;
+
+while (true) {
+    nombreUsuario = prompt("Por favor, ingrese su nombre de usuario:");
+    
+    if (nombreUsuario !== null && nombreUsuario !== "") {
+        alert("¡Hola, " + nombreUsuario + "!");
+        break;
+    } else {
+        alert("Por favor, ingrese un nombre de usuario válido.");
+    }
+
+}
+// SOLICITAR QUE EL USUARIO ELIJA UN DESTINO PARA COMPRAR UN PASAJE DE AVIÓN
 let impuestoPais = 0.3; 
 let impuestoGanancias = 0.45;
 let impuestoBienesPersonales = 0.25;
 let impuestoTurismo = 0.07;
 
-
 function calcularImpuesto(importe) {
-    if (!isNaN(importe)) {
-        let resultado = (importe + (importe * impuestoPais) + (importe*impuestoGanancias) + (importe*impuestoBienesPersonales) + (importe*impuestoTurismo));
-        alert("El importe final es: " + "$"+resultado.toFixed(2));
+    if (importe) {
+        let resultado = (importe + (importe * impuestoPais) + (importe * impuestoGanancias) + (importe * impuestoBienesPersonales) + (importe * impuestoTurismo));
+        alert("El importe final es: $" + resultado);
     } else {
         alert("Por favor, ingrese un importe válido.");
     }
 }
 
-function pasajes(destinos) {
+function mostrarDestinos(destinos) {
     alert("Destinos disponibles:");
-    for (const destino in destinos) {
-        alert(destino + ": $" + destinos[destino]);
-    }
+    alert("Cancun: $" + destinos["Cancun"]);
+    alert("Madrid: $" + destinos["Madrid"]);
+    alert("Sidney: $" + destinos["Sidney"]);
+}
+
+function pasajes(destinos) {
+    mostrarDestinos(destinos);
     
     let elegirDestino = prompt("Elija un destino: ");
-    
-    if (destinos.hasOwnProperty(elegirDestino)) {
+
+    if (destinos[elegirDestino]) {
         alert("¡Muy bien! A continuación podrá ver el costo más los impuestos");
         calcularImpuesto(destinos[elegirDestino]);
     } else {
@@ -37,6 +54,11 @@ const destinosConImportes = {
 };
 
 pasajes(destinosConImportes);
+
+
+
+
+
 
 
 
