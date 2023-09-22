@@ -5,7 +5,7 @@ while (true) {
     nombreUsuario = prompt("Por favor, ingrese su nombre de usuario:");
 
     if (nombreUsuario !== null && nombreUsuario !== "") {
-        alert("¡Hola, " + nombreUsuario + "! A continuacion podrá ver los destinos de viaje.");
+        alert("¡Hola, " + nombreUsuario + "!" + "A continuacion podrá ver los destinos de viaje.");
         break;
     } else {
         alert("Por favor, ingrese un nombre de usuario válido.");
