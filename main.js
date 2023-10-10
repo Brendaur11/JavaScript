@@ -28,7 +28,7 @@ function mostrarDestinos() {
 function pasajes() {
     mostrarDestinos();
 
-    let elegirDestino = prompt("Elija un destino: ");
+    let elegirDestino = prompt("Elija un destino: ").toLowerCase();
 
     switch (elegirDestino) {
         case "Cancun":
